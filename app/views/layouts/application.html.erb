@@ -1,24 +1,49 @@
-<!DOCTYPE html>
 <html>
   <head>
-    <title>Quiz1</title>
+    <title>Splurty</title>
     <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
     <header class="row">
       <div class="col-3">
-        
+        <div class="circle">
+          <br />
+          You know
+          <br />
+          you need
+          <br />
+          to code
+        </div>
       </div>
       <div class="col-4 slogan">
-        Quiz Requirements to complete Nomster Block!
+        Quiz Requirements to Complete Nomster!
+      </div>
+      <div class="col-5 links">
+        <%= link_to 'Contribute', '#' %>
+        <%= link_to 'About', '#' %>
       </div>
     </header>
+    <hr />
+    <br class="clear" />
 
+    <div class="container">
+      <%= yield %>
+    </div>
 
-    <%= yield %>
+    <div class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-6">
+        <%= link_to "Dealing With Frustration One Line Of Code At A Time", "#", class: 'next-quote' %>
+      </div>
+      <div class="col-6 footer-blurb">
+        Built By Tom, This is Barebones for a reason.
+      </div>
+    </div>
+  </div>
+</div>
+
   </body>
 </html>
