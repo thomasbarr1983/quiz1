@@ -18,8 +18,6 @@ ActiveRecord::Schema.define(version: 2019_08_28_163704) do
   create_table "quotes", force: :cascade do |t|
     t.string "saying"
     t.string "author"
-    t.datetime "created_at",
-    t.datetime "updated_at",
   end
 
 end

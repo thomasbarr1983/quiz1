@@ -5,4 +5,4 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-quote = Quote.create([{ saying: 'That's the thing about people who think they hate computers. What they really hate is lousy programmers.', author: 'Larry Niven'}])
+quote = Quote.create([{ saying: 'That is the thing about people who think they hate computers. What they really hate is lousy programmers.', author: 'Larry Niven'}])
