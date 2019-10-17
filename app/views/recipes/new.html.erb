@@ -1,0 +1,8 @@
+<h1>Enter Your Recipe</h1>
+<%= simple_form_for @recipe do |f| %>
+  <%= f.input :name %>
+  <%= f.input :ingredients %>
+  <%= f.input :cooking_method %>
+  <%= f.button :submit %>
+<% end %>
+

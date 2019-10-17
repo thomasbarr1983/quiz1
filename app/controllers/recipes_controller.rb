@@ -1,11 +1,11 @@
 class RecipesController < ApplicationController
   def index
-    @recipe = Recipe.last
-end
+    @recipes = Recipe.all
+  end
 
 
   def create
-    Recipe.create(recipe_params)
+    @recipe = Recipe.create(recipe_params)
     if @recipe.invalid?
     flash[:error] = '<strong>Could not save</strong> the data you entered is invalid.'
     end
@@ -15,9 +15,13 @@ end
   def about
   end
 
+  def new
+    @recipe = Recipe.new
+  end
   private
 
   def recipe_params
     params.require(:recipe).permit(:ingredients, :cooking_method, :name)
   end
-end    
+end
+

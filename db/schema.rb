@@ -15,11 +15,6 @@ ActiveRecord::Schema.define(version: 2019_09_26_234318) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "quotes", force: :cascade do |t|
-    t.string "saying"
-    t.string "author"
-  end
-
   create_table "recipes", force: :cascade do |t|
     t.text "ingredients"
     t.string "name"

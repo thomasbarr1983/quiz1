@@ -1,2 +1,14 @@
-<h1><%= @recipe.name %></h1>
-<h2 class="float-right">- <%= @recipe.ingredients %></h2>
+<% @recipes.each do |recipe| %>
+  <div class="booyah-box col-10 offset-1">
+  <h1><%= recipe.name %></h1>
+  </br>
+  <h2><%= recipe.ingredients %></h2>
+  </br>
+  <h3><%= recipe.cooking_method %></h3>
+  </div>
+      
+<% end %>
+
+<%= link_to 'Create', new_recipe_path(@recipes), class: 'btn btn-secondary' %>
+
+
